@@ -31,7 +31,12 @@ const users = [
     name: "Devashree",
     email: "devashree@socialkitchen.com",
     password: bcrypt.hashSync("123456", 10),
-  }
+  },
+  {
+    name: "testUser",
+    email: "testUser@socialkitchen.com",
+    password: bcrypt.hashSync("123456", 10),
+  },
 ];
 
 export default users;
