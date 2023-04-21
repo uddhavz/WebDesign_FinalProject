@@ -1,10 +1,11 @@
 import React from "react";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const Rating = ({ value, text, color }) => {
   return (
     <div className="rating">
       <span>
-        <i
+        {/* <i
           style={{ color }}
           className={
             value >= 1
@@ -13,10 +14,11 @@ const Rating = ({ value, text, color }) => {
               ? "fas fa-star-half-alt"
               : "far fa-star"
           }
-        ></i>
+        ></i> */}
+        {value >= 1 ? <FaStar color={color} /> : value >= 0.5 ? <FaStarHalfAlt color={color} /> : <FaRegStar color={color} />}
       </span>
       <span>
-        <i
+        {/* <i
           style={{ color }}
           className={
             value >= 2
@@ -25,10 +27,11 @@ const Rating = ({ value, text, color }) => {
               ? "fas fa-star-half-alt"
               : "far fa-star"
           }
-        ></i>
+        ></i> */}
+         {value >= 2 ? <FaStar color={color} /> : value >= 1.5 ? <FaStarHalfAlt color={color} /> : <FaRegStar color={color} />}
       </span>
       <span>
-        <i
+        {/* <i
           style={{ color }}
           className={
             value >= 3
@@ -37,10 +40,11 @@ const Rating = ({ value, text, color }) => {
               ? "fas fa-star-half-alt"
               : "far fa-star"
           }
-        ></i>
+        ></i> */}
+         {value >= 3 ? <FaStar color={color} /> : value >= 2.5 ? <FaStarHalfAlt color={color} /> : <FaRegStar color={color} />}
       </span>
       <span>
-        <i
+        {/* <i
           style={{ color }}
           className={
             value >= 4
@@ -49,10 +53,11 @@ const Rating = ({ value, text, color }) => {
               ? "fas fa-star-half-alt"
               : "far fa-star"
           }
-        ></i>
+        ></i> */}
+         {value >= 4 ? <FaStar color={color} /> : value >= 3.5 ? <FaStarHalfAlt color={color} /> : <FaRegStar color={color} />}
       </span>
       <span>
-        <i
+        {/* <i
           style={{ color }}
           className={
             value >= 5
@@ -61,7 +66,8 @@ const Rating = ({ value, text, color }) => {
               ? "fas fa-star-half-alt"
               : "far fa-star"
           }
-        ></i>
+        ></i> */}
+        {value >= 5 ? <FaStar color={color} /> : value >= 4.5 ? <FaStarHalfAlt color={color} /> : <FaRegStar color={color} />}
       </span>
       <span>{text && text}</span>
     </div>
