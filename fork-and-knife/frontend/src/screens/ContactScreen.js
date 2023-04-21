@@ -20,7 +20,11 @@ const contact = () => {
                 <div className="contact-widget-item">
                   <div className="text">
                     <FaPhone
-                      style={{ fontSize: "30px", marginBottom: "10px", color: "black" }}
+                      style={{
+                        fontSize: "30px",
+                        marginBottom: "10px",
+                        color: "black",
+                      }}
                     ></FaPhone>
                     <h5>Call Us</h5>
                     <p>123-123-1234</p>
@@ -33,7 +37,11 @@ const contact = () => {
                   <div className="icon"></div>
                   <div className="text">
                     <FaEnvelope
-                      style={{ fontSize: "36px", marginBottom: "10px", color: "black" }}
+                      style={{
+                        fontSize: "36px",
+                        marginBottom: "10px",
+                        color: "black",
+                      }}
                     ></FaEnvelope>
                     <h5>EMAIL</h5>
                     <p>help@forkandknife.com</p>
@@ -43,12 +51,14 @@ const contact = () => {
 
               <div className="contact-widget">
                 <div className="contact-widget-item">
-                  <div className="icon">
-                    
-                  </div>
+                  <div className="icon"></div>
                   <div className="text">
-                  <FaMapMarkerAlt
-                      style={{ fontSize: "36px", marginBottom: "10px", color: "black" }}
+                    <FaMapMarkerAlt
+                      style={{
+                        fontSize: "36px",
+                        marginBottom: "10px",
+                        color: "black",
+                      }}
                     ></FaMapMarkerAlt>
                     <h5>Address</h5>
                     <p>219 Washington street,Boston,MA,02115,United States</p>
@@ -84,16 +94,17 @@ const contact = () => {
 
                   <div className="form-ui">
                     <div className="form-element">
-                      <label htmlFor="location">
+                      <label htmlFor="name">
                         <i className="error-label"></i>
-                        <span className="input-label">Location</span>
+                        <span className="input-label">Name</span>
                       </label>
                       <input
                         type="text"
                         className="form-control"
                         aria-describedby="location"
-                        placeholder="Enter Your Location"
+                        placeholder="Enter Your Name"
                         style={{ border: "3px solid black" }}
+                        required
                       />
                     </div>
 
@@ -107,6 +118,7 @@ const contact = () => {
                         aria-describedby="seats"
                         placeholder="Number of People"
                         style={{ border: "3px solid black" }}
+                        required
                       />
                     </div>
 
@@ -120,6 +132,7 @@ const contact = () => {
                         aria-describedby="date"
                         placeholder="Date"
                         style={{ border: "3px solid black" }}
+                        required
                       />
                     </div>
 
@@ -133,6 +146,18 @@ const contact = () => {
                         aria-describedby="email"
                         placeholder="Enter your Email "
                         style={{ border: "3px solid black" }}
+                        required
+                        onChange={(event) => {
+                          const emailInput = event.target;
+                          const isValidEmail = emailInput.checkValidity();
+                          const reserveButton =
+                            document.querySelector(".form-button");
+                          if (isValidEmail) {
+                            reserveButton.removeAttribute("disabled");
+                          } else {
+                            reserveButton.setAttribute("disabled", true);
+                          }
+                        }}
                       />
                     </div>
                   </div>
@@ -141,6 +166,7 @@ const contact = () => {
                     <button
                       style={{ marginBottom: "10px" }}
                       className="form-button"
+                      disabled
                     >
                       RESERVE YOUR SPOT
                     </button>
