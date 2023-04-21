@@ -15,6 +15,8 @@ import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from "../constants/orderConstants";
+// import Alert from 'react-bootstrap/Alert';
+import { Modal } from 'react-bootstrap';
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
@@ -34,6 +36,8 @@ const OrderScreen = ({ match, history }) => {
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
+
+  const [showModal, setShowModal] = useState(false);
 
   if (!loading) {
     //   Calculate prices
@@ -67,6 +71,7 @@ const OrderScreen = ({ match, history }) => {
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
+      if(!userInfo.isAdmin){setShowModal(true)}
     } else if (!order.isPaid) {
       if (!window.paypal) {
         addPayPalScript();
@@ -126,7 +131,24 @@ const OrderScreen = ({ match, history }) => {
                 {order.paymentMethod}
               </p>
               {order.isPaid ? (
+                <>
                 <Message variant="success">Paid on {order.paidAt}</Message>
+                <Modal show={showModal} onHide={() => setShowModal(false)}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Order Received</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <p>Your payment was successful, and we have received your order.</p>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>
+                      Close
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+                {/* <Button variant="primary" onClick={() => setShowModal(true)}>Show Modal</Button> */}
+
+              </>
               ) : (
                 <Message variant="danger">Not Paid</Message>
               )}
@@ -232,3 +254,4 @@ const OrderScreen = ({ match, history }) => {
 };
 
 export default OrderScreen;
+
