@@ -31,9 +31,9 @@ const LoginScreen = ({ location, history }) => {
 
   return (
     <>
-      <video className='videoTag' autoPlay loop muted>
+      {/* <video className='videoTag' autoPlay loop muted>
        <source src="./images/Logincheck.mp4" type='video/mp4' />
-      </video>
+      </video> */}
     <FormContainer>
     
       <h1>Sign In</h1>
