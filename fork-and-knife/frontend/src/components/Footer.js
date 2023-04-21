@@ -8,12 +8,13 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer style={{ backgroundColor: "black" }}>
       <Container>
-        <Row>
+        <Row className="icon-row">
           <Col className="text-center">
             <a
               className="btn btn-outline-light btn-floating m-1"
