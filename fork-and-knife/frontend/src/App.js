@@ -22,21 +22,21 @@ import AboutScreen from "./screens/AboutScreen";
 import ContactScreen from "./screens/ContactScreen";
 // // import Contact from "./components/contact";
 // import Contact from "./components/Reservation";
-const checkStyle = () =>{
-  if(window.location.pathname == '/login'){
-    return 'url(/images/signup.jpeg)';
-  }
-  if(window.location.pathname == '/register'){
-    return 'url(/images/signup.jpeg)';
-  }
-  return null;  
-}
+// const checkStyle = () =>{
+//   if(window.location.pathname == '/login'){
+//     return 'url(/images/signup.jpeg)';
+//   }
+//   if(window.location.pathname == '/register'){
+//     return 'url(/images/signup.jpeg)';
+//   }
+//   return null;  
+// }
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <main className="py-1" style={{backgroundImage: checkStyle(), backgroundSize: 'cover'}}>
+      <main className="py-1">
 
         <Container>
           <Route path="/order/:id" component={OrderScreen} />
