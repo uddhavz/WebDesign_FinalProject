@@ -81,9 +81,9 @@ const CartScreen = ({ match, location, history }) => {
                   <Col md={2}>
                     <Button
                       type="button"
-                      variant="light"
+                      variant="dark"
                       onClick={() => removeFromCartHandler(item.fooditem)}
-                    >
+                    >REMOVE
                       <i className="fas fa-trash"></i>
                     </Button>
                   </Col>
