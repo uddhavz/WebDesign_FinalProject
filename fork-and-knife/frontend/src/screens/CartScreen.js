@@ -41,7 +41,7 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <>
     <video className='videoTag' autoPlay loop muted>
-    <source src="./images/shoppingcart.mp4" type='video/mp4' />
+    <source src="/images/cart.mp4" type='video/mp4' />
    </video>
     <Row>
       <Col md={8}>
@@ -96,7 +96,10 @@ const CartScreen = ({ match, location, history }) => {
           </ListGroup>
         )}
       </Col>
-      <Col md={4}>
+      
+    </Row>
+    <Row>
+    <Col md={4} style={{marginTop:"50px"}}>
         <Card>
           <ListGroup variant="flush">
             <ListGroup.Item>
