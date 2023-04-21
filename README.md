@@ -7,7 +7,7 @@
   - Uddhav Zambare (NUID: 002199488)
   - Devashree Joshi (NUID: 001009214 )
 
-# Topic: Fork & Spoon
+# Topic: Fork & Knife
 Fork and Knife is more than just a meal delivery service - it's a commitment to promoting a balanced and healthy lifestyle. Our aim is to provide you with the best food, made with natural and high-quality ingredients, delivered straight to your doorstep.We are passionate about delivering nutritious, wholesome meals that not only satisfy your hunger but also nourish your body and soul. Our mission is to help people make informed decisions about their food choices and eating habits, and ultimately, to help them find joy in the simple pleasures of life.
 At Fork and Knife, we believe that good food is not just about the taste, but also about the quality and nutritional value of the ingredients. That's why we use only the finest and freshest ingredients to create our dishes, ensuring that every bite is packed with flavor and nutrients. Whether you're looking to stay fit, lose weight, or simply eat healthier, our dishes are designed to cater to your needs. We offer a wide range of options, from low-carb and gluten-free to vegetarian and vegan, so there's something for everyone.
 
