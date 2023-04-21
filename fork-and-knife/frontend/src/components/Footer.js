@@ -14,51 +14,51 @@ const Footer = () => {
   return (
     <footer style={{ backgroundColor: "black" }}>
       <Container>
-        <Row className="icon-row">
-          <Col className="text-center">
+        <Row className="icon-row" >
+          <Col className="text-center" style={{marginTop: "15px"}}>
             <a
-              className="btn btn-outline-light btn-floating m-1"
+              className="btn btn-floating m-1"
               href="#!"
               role="button"
             >
-              <FaFacebook style={{ fontSize: "24px" }} />
+              <FaFacebook style={{ fontSize: "24px", color: "white" }} />
             </a>
             <a
-              className="btn btn-outline-light btn-floating m-1"
+              className="btn btn-floating m-1"
               href="#!"
               role="button"
             >
-              <FaTwitter style={{ fontSize: "24px" }} />
+              <FaTwitter style={{ fontSize: "24px", color: "white" }} />
             </a>
             <a
-              className="btn btn-outline-light btn-floating m-1"
+              className="btn btn-floating m-1"
               href="#!"
               role="button"
             >
-              <FaGoogle style={{ fontSize: "24px" }} />
+              <FaGoogle style={{ fontSize: "24px", color: "white" }} />
             </a>
             <a
-              className="btn btn-outline-light btn-floating m-1"
+              className="btn btn-floating m-1"
               href="#!"
               role="button"
             >
-              <FaInstagram style={{ fontSize: "24px" }} />
+              <FaInstagram style={{ fontSize: "24px", color: "white" }} />
             </a>
             <a
-              className="btn btn-outline-light btn-floating m-1"
+              className="btn btn-floating m-1"
               href="#!"
               role="button"
             >
-              <FaLinkedinIn style={{ fontSize: "24px" }} />
+              <FaLinkedinIn style={{ fontSize: "24px", color: "white" }} />
             </a>
             <a
-              className="btn btn-outline-light btn-floating m-1"
+              className="btn btn-floating m-1"
               href="#!"
               role="button"
             >
               <FaGithub
                 style={{
-                  fontSize: "24px",
+                  fontSize: "24px", color: "white"
                 }}
               />
             </a>
