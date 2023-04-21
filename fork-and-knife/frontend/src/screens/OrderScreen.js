@@ -18,6 +18,8 @@ import {
 // import Alert from 'react-bootstrap/Alert';
 import { Modal } from 'react-bootstrap';
 
+var orderStatus=""; 
+
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
 
@@ -71,6 +73,7 @@ const OrderScreen = ({ match, history }) => {
       dispatch({ type: ORDER_PAY_RESET });
       dispatch({ type: ORDER_DELIVER_RESET });
       dispatch(getOrderDetails(orderId));
+      
       if(!userInfo.isAdmin){setShowModal(true)}
     } else if (!order.isPaid) {
       if (!window.paypal) {
@@ -79,6 +82,7 @@ const OrderScreen = ({ match, history }) => {
         setSdkReady(true);
       }
     }
+    
   }, [dispatch, orderId, successPay, successDeliver, order]);
 
   const successPaymentHandler = (paymentResult) => {
@@ -135,11 +139,18 @@ const OrderScreen = ({ match, history }) => {
                 <Message variant="success">Paid on {order.paidAt}</Message>
                 <Modal show={showModal} onHide={() => setShowModal(false)}>
                   <Modal.Header closeButton>
-                    <Modal.Title>Order Received</Modal.Title>
+                    <Modal.Title>Order Status</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
-                    <p>Your payment was successful, and we have received your order.</p>
-                  </Modal.Body>
+                  {order.isPaid && !order.isDelivered ? (
+                    <p>Your order has been received.</p>
+                  ) : order.isPaid && order.isDelivered ? (
+                    <p>Your order has been delivered.</p>
+                  ) : (
+                    <p>Please pay for your order.</p>
+                  )}
+                </Modal.Body>
+
                   <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowModal(false)}>
                       Close

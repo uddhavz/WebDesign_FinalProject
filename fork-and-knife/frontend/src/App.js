@@ -20,6 +20,8 @@ import FooditemEditScreen from "./screens/FooditemEditScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ContactScreen from "./screens/ContactScreen";
+// // import Contact from "./components/contact";
+// import Contact from "./components/Reservation";
 const App = () => {
   return (
     <Router>
@@ -65,6 +67,7 @@ const App = () => {
               component={HomeScreen}
               exact
             />
+             {/* <Route path="/reservations" component={Contact} /> */}
             <Route path="/" component={HomeScreen} exact />
          </Container>
       </main>

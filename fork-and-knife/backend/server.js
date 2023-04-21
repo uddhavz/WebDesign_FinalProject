@@ -1,5 +1,5 @@
 import path from "path";
-import express from "express";
+import express, { response } from "express";
 import dotenv from "dotenv";
 import colors from "colors";
 import morgan from "morgan";
@@ -10,6 +10,8 @@ import fooditemRoutes from "./routes/fooditemRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+
+import nodemailer from "nodemailer"; 
 
 dotenv.config();
 
@@ -48,6 +50,40 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(notFound);
 app.use(errorHandler);
+
+//nodemailer code
+
+// function sendEmail(){
+//   return new Promise((resolve, reject)=>{
+
+//     var transporter=nodemailer.createTransport({
+//       service: "gmail",
+//       auth:{
+//         user:'connectionmongo@gmail.com',
+//         password: bwvugehawmkmplsb
+//       }
+//     })
+//     const mail_configs={
+//       from:'connectionmongo@gmail.com',
+//       to:'tripathi.su@northeastern.edu',
+//       subject:'Testing email',
+//       text: "Checking if email works"
+//     }
+//     transporter.sendMail(mail_configs, function(error,infor){
+//       if(error){
+//         console.log(error); 
+//         return reject({message:`An error has occured`})
+//       }
+//       return resolve({message :"Email sent successfully"})
+//     })
+//   })
+// }
+
+// app.get('/sendemail', (req,res)=>{
+//   sendEmail()
+//   .then(response=>res.send(response.message))
+//   .catch(error=>res.status(500).send(error.message))
+// })
 
 const PORT = 5001;
 

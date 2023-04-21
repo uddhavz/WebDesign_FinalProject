@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
+import { FaTrash } from "react-icons/fa";
 
 const CartScreen = ({ match, location, history }) => {
   const fooditemId = match.params.id;
@@ -80,11 +81,12 @@ const CartScreen = ({ match, location, history }) => {
                     </Form.Control>
                   </Col>
                   <Col md={2}>
-                    <Button
+                    <Button style={{marginLeft:"10px"}}
                       type="button"
                       variant="dark"
                       onClick={() => removeFromCartHandler(item.fooditem)}
-                    >REMOVE
+                    ><div><FaTrash >
+                      </FaTrash></div>
                       <i className="fas fa-trash"></i>
                     </Button>
                   </Col>
