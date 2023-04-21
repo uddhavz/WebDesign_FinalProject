@@ -11,7 +11,7 @@ export default function AboutScreen() {
 
 <Card className="bg-white text-dark" style={{position: "relative", width: "90%",height:"40%", margin:"0 auto", border:"none"}}>
   <Card.Img className='pageBanner' src="./images/aboutUs.jpg" alt="Card image"  />
-  <Card.Title className='pageTitle'>About use </Card.Title>
+  <Card.Title className='pageTitle'>About Us </Card.Title>
 </Card>
 
  <div className='review' style={{margin:"20px auto", width:"70%" }}>

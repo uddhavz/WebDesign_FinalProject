@@ -26,7 +26,7 @@ const Header = () => {
             <Navbar.Brand className="navbar-brand-left">
               <img
                 alt=""
-                src="./images/kitchen-favicon-copy.jpeg"
+                src="/images/kitchen-favicon-copy.jpeg"
                 width="50"
                 height="50"
                 className="d-inline-block align-top mr-2"
