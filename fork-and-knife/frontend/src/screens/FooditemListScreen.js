@@ -100,7 +100,7 @@ const FooditemListScreen = ({ history, match }) => {
                 <th>PRICE</th>
                 <th>CATEGORY</th>
                 <th>CALORIES</th>
-                <th></th>
+                <th>EDIT/DELETE</th>
               </tr>
             </thead>
             <tbody>
@@ -115,7 +115,7 @@ const FooditemListScreen = ({ history, match }) => {
                     <LinkContainer to={`/admin/fooditem/${fooditem._id}/edit`}>
                       <Button variant="light" className="btn-sm">
                         <i className="fas fa-edit"></i>
-                      </Button>
+                      EDIT</Button>
                     </LinkContainer>
                     <Button
                       variant="danger"
@@ -123,7 +123,7 @@ const FooditemListScreen = ({ history, match }) => {
                       onClick={() => deleteHandler(fooditem._id)}
                     >
                       <i className="fas fa-trash"></i>
-                    </Button>
+                    DELETE</Button>
                   </td>
                 </tr>
               ))}

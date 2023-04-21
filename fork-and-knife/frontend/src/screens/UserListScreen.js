@@ -47,7 +47,7 @@ const UserListScreen = ({ history }) => {
               <th>NAME</th>
               <th>EMAIL</th>
               <th>ADMIN</th>
-              <th></th>
+              <th>EDIT/DELETE</th>
             </tr>
           </thead>
           <tbody>
@@ -60,16 +60,16 @@ const UserListScreen = ({ history }) => {
                 </td>
                 <td>
                   {user.isAdmin ? (
-                    <i className="fas fa-check" style={{ color: "green" }}></i>
+                    <i className="fas fa-check" style={{ color: "green" }}>ADMIN</i>
                   ) : (
-                    <i className="fas fa-times" style={{ color: "red" }}></i>
+                    <i className="fas fa-times" style={{ color: "red" }}>USER</i>
                   )}
                 </td>
                 <td>
                   <LinkContainer to={`/admin/user/${user._id}/edit`}>
                     <Button variant="light" className="btn-sm">
                       <i className="fas fa-edit"></i>
-                    </Button>
+                    EDIT</Button>
                   </LinkContainer>
                   <Button
                     variant="danger"
@@ -77,7 +77,7 @@ const UserListScreen = ({ history }) => {
                     onClick={() => deleteHandler(user._id)}
                   >
                     <i className="fas fa-trash"></i>
-                  </Button>
+                  DELETE</Button>
                 </td>
               </tr>
             ))}
