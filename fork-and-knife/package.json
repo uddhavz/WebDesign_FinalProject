@@ -1,4 +1,5 @@
 {
+  "homepage": "http://DevJo-NEU.github.io/INFO6150_WebDesign_FinalProject",
   "name": "fork-and-knife",
   "version": "1.0.0",
   "description": "MERN food delivery app",
@@ -6,13 +7,14 @@
   "type": "module",
   "scripts": {
     "start": "node backend/server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
-    "render-cmd": "npm install && cd frontend && npm install && cd .. && npm run dev ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "render-cmd": "npm install && cd frontend && npm install && cd .. && npm run dev "
   },
   "author": "Brad Traversy",
   "license": "MIT",
