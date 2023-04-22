@@ -22,6 +22,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+          alert("Reservation confirmed!");
         },
         (error) => {
           console.log(error.text);
@@ -37,18 +38,21 @@ const Contact = () => {
           type="text"
           name="user_name"
           style={{ border: "3px solid black" }}
+          required
         />
         <label>Email</label>
         <input
           type="email"
           name="user_email"
           style={{ border: "3px solid black" }}
+          required
         />
         <label>Reservation date</label>
         <input
           type="Date"
           name="reservation_date"
           style={{ border: "3px solid black" }}
+          required
         />
         <label>Reservation time</label>
         <input
