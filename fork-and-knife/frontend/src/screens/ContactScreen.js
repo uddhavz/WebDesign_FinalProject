@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./CSS/Contact.css";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Contact from "../components/Contact"; 
 
 const contact = () => {
   return (
@@ -20,7 +21,11 @@ const contact = () => {
                 <div className="contact-widget-item">
                   <div className="text">
                     <FaPhone
-                      style={{ fontSize: "30px", marginBottom: "10px", color: "black" }}
+                      style={{
+                        fontSize: "30px",
+                        marginBottom: "10px",
+                        color: "black",
+                      }}
                     ></FaPhone>
                     <h5>Call Us</h5>
                     <p>123-123-1234</p>
@@ -33,7 +38,11 @@ const contact = () => {
                   <div className="icon"></div>
                   <div className="text">
                     <FaEnvelope
-                      style={{ fontSize: "36px", marginBottom: "10px", color: "black" }}
+                      style={{
+                        fontSize: "36px",
+                        marginBottom: "10px",
+                        color: "black",
+                      }}
                     ></FaEnvelope>
                     <h5>EMAIL</h5>
                     <p>help@forkandknife.com</p>
@@ -43,12 +52,14 @@ const contact = () => {
 
               <div className="contact-widget">
                 <div className="contact-widget-item">
-                  <div className="icon">
-                    
-                  </div>
+                  <div className="icon"></div>
                   <div className="text">
-                  <FaMapMarkerAlt
-                      style={{ fontSize: "36px", marginBottom: "10px", color: "black" }}
+                    <FaMapMarkerAlt
+                      style={{
+                        fontSize: "36px",
+                        marginBottom: "10px",
+                        color: "black",
+                      }}
                     ></FaMapMarkerAlt>
                     <h5>Address</h5>
                     <p>219 Washington street,Boston,MA,02115,United States</p>
@@ -73,83 +84,12 @@ const contact = () => {
               </div>
             </div>
           </div>
+          <br></br>
+          <h2 className="form-title" style={{textAlign:"center"}}>Make a reservation</h2>
 
-          <div className="row">
-            <div className="form-row" style={{ margin: "auto" }}>
-              <div className="column" style={{ marginTop: "40px" }}>
-                <form>
-                  <div className="form-header">
-                    <h4 className="form-title"> Reservations </h4>
-                  </div>
-
-                  <div className="form-ui">
-                    <div className="form-element">
-                      <label htmlFor="location">
-                        <i className="error-label"></i>
-                        <span className="input-label">Location</span>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        aria-describedby="location"
-                        placeholder="Enter Your Location"
-                        style={{ border: "3px solid black" }}
-                      />
-                    </div>
-
-                    <div className="form-element">
-                      <label htmlFor="seats">
-                        <span className="input-label">Number of People</span>
-                      </label>
-                      <input
-                        type="number"
-                        className="form-control"
-                        aria-describedby="seats"
-                        placeholder="Number of People"
-                        style={{ border: "3px solid black" }}
-                      />
-                    </div>
-
-                    <div className="form-element">
-                      <label htmlFor="dates">
-                        <span className="input-label">Date</span>
-                      </label>
-                      <input
-                        type="date"
-                        className="form-control"
-                        aria-describedby="date"
-                        placeholder="Date"
-                        style={{ border: "3px solid black" }}
-                      />
-                    </div>
-
-                    <div className="form-element">
-                      <label htmlFor="email">
-                        <span className="input-label">Email</span>
-                      </label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        aria-describedby="email"
-                        placeholder="Enter your Email "
-                        style={{ border: "3px solid black" }}
-                      />
-                    </div>
-                  </div>
-
-                  <div style={{ marginTop: "20px" }}>
-                    <button
-                      style={{ marginBottom: "10px" }}
-                      className="form-button"
-                    >
-                      RESERVE YOUR SPOT
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+          <Contact></Contact>
         </div>
+        <br></br>
       </section>
     </Fragment>
   );

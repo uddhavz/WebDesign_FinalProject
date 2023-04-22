@@ -20,23 +20,24 @@ import FooditemEditScreen from "./screens/FooditemEditScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ContactScreen from "./screens/ContactScreen";
+import MenuScreen from "./screens/MenuScreen";
 // // import Contact from "./components/contact";
 // import Contact from "./components/Reservation";
-const checkStyle = () =>{
-  if(window.location.pathname == '/login'){
-    return 'url(/images/signup.jpeg)';
-  }
-  if(window.location.pathname == '/register'){
-    return 'url(/images/signup.jpeg)';
-  }
-  return null;  
-}
+// const checkStyle = () =>{
+//   if(window.location.pathname == '/login'){
+//     return 'url(/images/signup.jpeg)';
+//   }
+//   if(window.location.pathname == '/register'){
+//     return 'url(/images/signup.jpeg)';
+//   }
+//   return null;  
+// }
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <main className="py-1" style={{backgroundImage: checkStyle(), backgroundSize: 'cover'}}>
+      <main className="py-1">
 
         <Container>
           <Route path="/order/:id" component={OrderScreen} />
@@ -70,6 +71,7 @@ const App = () => {
           <Container fluid style={{padding:"0px"}}>
           <Route path="/about" component={AboutScreen} />
           <Route path="/contact" component={ContactScreen} />
+          <Route path="/menu" component={MenuScreen} />
 
             <Route path="/search/:keyword" component={HomeScreen} exact />
             <Route path="/page/:pageNumber" component={HomeScreen} exact />

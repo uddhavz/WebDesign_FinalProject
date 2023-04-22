@@ -10,6 +10,7 @@ import { login } from "../actions/userActions";
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
 
   const dispatch = useDispatch();
 
@@ -26,14 +27,17 @@ const LoginScreen = ({ location, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(login(email, password));
+    
+      dispatch(login(email, password));
+    
+    
   };
 
   return (
     <>
-      {/* <video className='videoTag' autoPlay loop muted>
+      <video className='videoTag' autoPlay loop muted>
        <source src="./images/Logincheck.mp4" type='video/mp4' />
-      </video> */}
+      </video>
     <FormContainer>
     
       <h1>Sign In</h1>
@@ -57,7 +61,9 @@ const LoginScreen = ({ location, history }) => {
             placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            
           ></Form.Control>
+          
         </Form.Group>
 
         <Button type="submit" variant="primary">

@@ -12,7 +12,7 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: "Welcome To Social Kitchen",
+  title: "Fork & Knife",
   description: "We deliver the best fooditems taking care of your health",
   keywords: "electronics, buy electronics, cheap electroincs",
 };

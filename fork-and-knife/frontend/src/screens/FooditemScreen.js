@@ -69,7 +69,11 @@ const FooditemScreen = ({ history, match }) => {
 
   return (
     <>
-      <Link className="btn btn-light my-3" to="/">
+      <Link
+        className="btn btn-light my-3"
+        to="/"
+        style={{ border: "2px solid black" }}
+      >
         Go Back
       </Link>
       {loading ? (
@@ -83,23 +87,7 @@ const FooditemScreen = ({ history, match }) => {
             <Col md={6}>
               <Image src={fooditem.image} alt={fooditem.name} fluid />
             </Col>
-            <Col md={3}>
-              <ListGroup variant="flush">
-                <ListGroup.Item>
-                  <h3>{fooditem.name}</h3>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <Rating
-                    value={fooditem.rating}
-                    text={`${fooditem.numReviews} reviews`}
-                  />
-                </ListGroup.Item>
-                <ListGroup.Item>Price: ${fooditem.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description: {fooditem.description}
-                </ListGroup.Item>
-              </ListGroup>
-            </Col>
+
             <Col md={3}>
               <Card>
                 <ListGroup variant="flush">
@@ -132,6 +120,7 @@ const FooditemScreen = ({ history, match }) => {
                             as="select"
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
+                            style={{ width: "100px" }}
                           >
                             {[...Array(fooditem.countInStock).keys()].map(
                               (x) => (
@@ -161,8 +150,27 @@ const FooditemScreen = ({ history, match }) => {
             </Col>
           </Row>
           <Row>
-            <Col md={6}>
-              <h2>Reviews</h2>
+            <Col md={8}>
+              <ListGroup variant="flush">
+                <ListGroup.Item style={{ textAlign: "left" }}>
+                  <h3>{fooditem.name}</h3>
+                </ListGroup.Item>
+                <ListGroup.Item style={{ textAlign: "left" }}>
+                  <Rating
+                    value={fooditem.rating}
+                    text={`${fooditem.numReviews} reviews`}
+                  />
+                </ListGroup.Item>
+                <ListGroup.Item>Price: ${fooditem.price}</ListGroup.Item>
+                <ListGroup.Item>
+                  Description: {fooditem.description}
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={8}>
+              <h2 style={{ padding: "0.75rem 1.25rem" }}>Reviews</h2>
               {fooditem.reviews.length === 0 && <Message>No Reviews</Message>}
               <ListGroup variant="flush">
                 {fooditem.reviews.map((review) => (
@@ -174,7 +182,7 @@ const FooditemScreen = ({ history, match }) => {
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
-                  <h2>Write a Customer Review</h2>
+                  <h2 style={{textAlign: "center"}}>Write a Customer Review</h2>
                   {successFooditemReview && (
                     <Message variant="success">
                       Review submitted successfully
