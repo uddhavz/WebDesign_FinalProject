@@ -54,14 +54,6 @@ The Git repository includes a README file and .gitignore to facilitate project m
 2. Backend: Node.js & Express
 3. Database: MongoDB
 
-## Deployment:
-
-GitHub Pages
-
-```
-Website URL : 
-```
-
 ## Setup:
 
 - Clone the repository using git clone command
