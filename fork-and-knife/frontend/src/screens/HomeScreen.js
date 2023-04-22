@@ -6,7 +6,6 @@ import Fooditem from "../components/Fooditem";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import Paginate from "../components/Paginate";
-import FooditemCarousel from "../components/FooditemCarousel";
 import VideoIntro from "../components/VideoIntro";
 import Meta from "../components/Meta";
 import { listFooditems } from "../actions/fooditemActions";
