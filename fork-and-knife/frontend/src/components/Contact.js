@@ -35,8 +35,14 @@ const Contact = () => {
         <input type="text" name="user_name" />
         <label>Email</label>
         <input type="email" name="user_email" />
+        <label>Reservation date</label>
+        <input type="Date" name="reservation_date"/>
+        <label>Reservation time</label>
+        <input type="Time" name="reservation_time"/>
         <label>Message</label>
         <textarea name="message" />
+       
+        
         <input type="submit" value="Reserve a spot" />
       </form>
     </StyledContactForm>
