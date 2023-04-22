@@ -85,7 +85,7 @@ const contact = () => {
             </div>
           </div>
           <br></br>
-          <h2 style={{textAlign:"center"}}>Make a reservation</h2>
+          <h2 className="form-title" style={{textAlign:"center"}}>Make a reservation</h2>
 
           <Contact></Contact>
         </div>

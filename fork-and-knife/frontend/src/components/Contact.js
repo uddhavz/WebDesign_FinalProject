@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import "./Contact.css";
 
 // npm i @emailjs/browser
 
@@ -30,20 +31,39 @@ const Contact = () => {
 
   return (
     <StyledContactForm>
-      <form style={{alignItems:"center"}} ref={form} onSubmit={sendEmail}>
+      <form style={{ alignItems: "center" }} ref={form} onSubmit={sendEmail}>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <input
+          type="text"
+          name="user_name"
+          style={{ border: "3px solid black" }}
+        />
         <label>Email</label>
-        <input type="email" name="user_email" />
+        <input
+          type="email"
+          name="user_email"
+          style={{ border: "3px solid black" }}
+        />
         <label>Reservation date</label>
-        <input type="Date" name="reservation_date"/>
+        <input
+          type="Date"
+          name="reservation_date"
+          style={{ border: "3px solid black" }}
+        />
         <label>Reservation time</label>
-        <input type="Time" name="reservation_time"/>
+        <input
+          type="Time"
+          name="reservation_time"
+          style={{ border: "3px solid black" }}
+        />
         <label>Message</label>
-        <textarea name="message" />
-       
-        
-        <input type="submit" value="Reserve a spot" />
+        <textarea name="message" style={{ border: "3px solid black" }} />
+
+        <input
+          type="submit"
+          value="RESERVE A SPOT"
+          className="submit-button"
+        />
       </form>
     </StyledContactForm>
   );
@@ -53,8 +73,6 @@ export default Contact;
 
 // Styles
 const StyledContactForm = styled.div`
-  
-
   form {
     // display: flex;
     // align-items: flex-start;
