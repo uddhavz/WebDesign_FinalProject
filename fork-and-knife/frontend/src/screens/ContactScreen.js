@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./CSS/Contact.css";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Contact from "../components/Contact"; 
 
 const contact = () => {
   return (
@@ -83,99 +84,12 @@ const contact = () => {
               </div>
             </div>
           </div>
+          <br></br>
+          <h2 style={{textAlign:"center"}}>Make a reservation</h2>
 
-          <div className="row">
-            <div className="form-row" style={{ margin: "auto" }}>
-              <div className="column" style={{ marginTop: "40px" }}>
-                <form>
-                  <div className="form-header">
-                    <h4 className="form-title"> Reservations </h4>
-                  </div>
-
-                  <div className="form-ui">
-                    <div className="form-element">
-                      <label htmlFor="name">
-                        <i className="error-label"></i>
-                        <span className="input-label">Name</span>
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        aria-describedby="location"
-                        placeholder="Enter Your Name"
-                        style={{ border: "3px solid black" }}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-element">
-                      <label htmlFor="seats">
-                        <span className="input-label">Number of People</span>
-                      </label>
-                      <input
-                        type="number"
-                        className="form-control"
-                        aria-describedby="seats"
-                        placeholder="Number of People"
-                        style={{ border: "3px solid black" }}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-element">
-                      <label htmlFor="dates">
-                        <span className="input-label">Date</span>
-                      </label>
-                      <input
-                        type="date"
-                        className="form-control"
-                        aria-describedby="date"
-                        placeholder="Date"
-                        style={{ border: "3px solid black" }}
-                        required
-                      />
-                    </div>
-
-                    <div className="form-element">
-                      <label htmlFor="email">
-                        <span className="input-label">Email</span>
-                      </label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        aria-describedby="email"
-                        placeholder="Enter your Email "
-                        style={{ border: "3px solid black" }}
-                        required
-                        onChange={(event) => {
-                          const emailInput = event.target;
-                          const isValidEmail = emailInput.checkValidity();
-                          const reserveButton =
-                            document.querySelector(".form-button");
-                          if (isValidEmail) {
-                            reserveButton.removeAttribute("disabled");
-                          } else {
-                            reserveButton.setAttribute("disabled", true);
-                          }
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  <div style={{ marginTop: "20px" }}>
-                    <button
-                      style={{ marginBottom: "10px" }}
-                      className="form-button"
-                      disabled
-                    >
-                      RESERVE YOUR SPOT
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+          <Contact></Contact>
         </div>
+        <br></br>
       </section>
     </Fragment>
   );
