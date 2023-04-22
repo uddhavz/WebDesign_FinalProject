@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import Accordion from 'react-bootstrap/Accordion';
 import CardGroup from 'react-bootstrap/CardGroup';
 import './CSS/AboutUs.css'
 
@@ -11,7 +10,7 @@ export default function AboutScreen() {
 
 <Card className="bg-white text-dark" style={{position: "relative", width: "90%",height:"40%", margin:"0 auto", border:"none"}}>
   <Card.Img className='pageBanner' src="./images/aboutUs.jpg" alt="Card image"  />
-  <Card.Title className='pageTitle'>About Us </Card.Title>
+  <Card.Title className='pageTitle'>About Us</Card.Title>
 </Card>
 
  <div className='review' style={{margin:"20px auto", width:"70%" }}>
@@ -31,31 +30,31 @@ export default function AboutScreen() {
   <Card>
   <Card.Img variant="top" className= "teamImg" src="./images/supriya.jpeg"  />
     <Card.Body className='teamBody'>
-    <Card.Title style={{textAlign:"center", fontSize:"18px"}} >Supriya Tripathi</Card.Title>
+    <Card.Title className='teamName'>Supriya Tripathi</Card.Title>
     </Card.Body>
   </Card>
   <Card>
   <Card.Img variant="top" className= "teamImg" src="./images/devashree.jpeg"   />
     <Card.Body className='teamBody'>
-    <Card.Title style={{textAlign:"center", fontSize:"18px"}}  >Devashree Joshi</Card.Title>
+    <Card.Title className='teamName'  >Devashree Joshi</Card.Title>
     </Card.Body>
   </Card>
   <Card>
   <Card.Img variant="top" className= "teamImg" src="./images/uddhav.jpeg"   />
     <Card.Body className='teamBody'>
-    <Card.Title style={{textAlign:"center", fontSize:"18px"}}  >Uddhav Zambare</Card.Title>
+    <Card.Title className='teamName'  >Uddhav Zambare</Card.Title>
     </Card.Body>
   </Card>
   <Card>
   <Card.Img variant="top" className= "teamImg" src="./images/spandana.jpeg"   />
     <Card.Body className='teamBody'>
-    <Card.Title style={{textAlign:"center", fontSize:"18px"}} >Spandana Parisi</Card.Title>
+    <Card.Title className='teamName' >Spandana Parisi</Card.Title>
     </Card.Body>
   </Card>
   <Card>
   <Card.Img variant="top" className= "teamImg" src="./images/davleen.jpeg"   />
     <Card.Body className='teamBody'>
-    <Card.Title style={{textAlign:"center", fontSize:"18px"}}  >Davleen Kaur</Card.Title>
+    <Card.Title className='teamName'  >Davleen Kaur</Card.Title>
     </Card.Body>
   </Card>
 </CardGroup>

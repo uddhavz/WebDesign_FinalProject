@@ -72,6 +72,30 @@ const fooditems = [
     rating: 0,
     numReviews: 0,
   },
+  {
+    name: "Ratatouille",
+    image: "/images/ratatouille.jpeg",
+    description:
+    "The Good Stuff",
+    calories: "450 cal",
+    category: "Herbivorous",
+    price: 15.99,
+    countInStock: 10,
+    rating: 5,
+    numReviews: 0,
+  },
+  {
+    name: "Sushi",
+    image: "/images/sushi.jpg",
+    description:
+    "I love the way you roll.",
+    calories: "450 cal",
+    category: "Carnivorous",
+    price: 15.99,
+    countInStock: 10,
+    rating: 5,
+    numReviews: 0,
+  },
 ];
 
 export default fooditems;
